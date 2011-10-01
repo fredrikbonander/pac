@@ -1,0 +1,15 @@
+{% extends "edit/index.html" %}
+{% block content %}
+<h1>Login</h1>
+<form action="{{ current_url }}" method="post">
+	{% if status.status_code != 1 %}
+		{{ status.status_message }}
+	{% endif %}
+	<fieldset>
+		<legend>Login form</legend>
+		<label>Username <input type="text" name="username" placeholder="Your username" /></label>
+		<label>Password <input type="password" name="password" placeholder="Your password" /></label>
+	</fieldset>
+	<button>Login</button>
+</form>
+{% endblock content %}

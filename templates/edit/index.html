@@ -1,0 +1,17 @@
+<!DOCTYPE hml>
+<html>
+	<head>
+		<title>Pac</title>
+	</head>
+	<body>
+		<nav role="navigation">
+			<ul>
+				{% for item in model.menu_list %}
+					<li><a href="/edit/{{ item }}/">{{ item }}</a></li>
+				{% endfor %}
+			</ul>
+		</nav>
+		{% block content %}
+		{% endblock %}
+	</body>
+</html>

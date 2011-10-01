@@ -1,0 +1,17 @@
+{% extends "edit/index.html" %}
+{% block content %}
+<h1>Setup</h1>
+<form action="{{ current_url }}" method="post">
+	
+	{% if status.status_code != 1 %}
+		{{ status.status_message }}
+	{% endif %}
+	<fieldset>
+		<legend>Add new admin user</legend>
+		<label>Username <input type="text" name="username" placeholder="Your username" /></label>
+		<label>Password <input type="password" name="password" placeholder="Your password" /></label>
+		<label>Repeat password <input type="password" name="password2" placeholder="Repeat password" /></label>
+	</fieldset>
+	<button>Create user</button>
+</form>
+{% endblock content %}

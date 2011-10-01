@@ -1,0 +1,6 @@
+error_codes:
+
+-1 Generic Error
+-10 "Username is too short"
+-11 "Password is too short"
+-12 'Password miss match'
