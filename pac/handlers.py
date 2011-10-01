@@ -141,5 +141,12 @@ class RequestHandler(BaseHandler):
         view_controller_cls = dispatcher.get_view_controller(args[0])
         view_controller = view_controller_cls()
 
+        return self.render_response(view_controller.view_model.html_view, model=view_controller.view_model)
+
+    def post(self, *args, **kwargs):
+        view_controller_cls = dispatcher.get_view_controller(args[0])
+        view_controller = view_controller_cls()
+
+        view_controller.dispatch_post(self.request.POST)
 
         return self.render_response(view_controller.view_model.html_view, model=view_controller.view_model)

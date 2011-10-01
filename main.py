@@ -4,7 +4,7 @@ import routes
 import webapp2
 import config
 
-app = webapp2.WSGIApplication(config=config.webapp2_config)
+app = webapp2.WSGIApplication(config=config.webapp2_config, debug=True)
 routes.add_routes(app)
 
 def main():

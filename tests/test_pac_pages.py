@@ -15,10 +15,9 @@ routes.add_routes(app)
 class FredTests(test_utils.DatastoreTest):
     def test_1(self):
         class Ent1(model.Model):
-            name = model.StringProperty()
-
+          name = model.StringProperty()
         class Ent2(model.Model):
-            age = model.StringProperty()
+          age = model.StringProperty()
 
         ent = Ent1(name='fredrik')
         key = ent.put()
@@ -42,7 +41,6 @@ class TestPagesHandler(test_utils.DatastoreTest):
         new_page = page.get()
 
         self.assertEqual(new_page.name, 'First page')
-
 
     def test_create_a_new_page_with_content(self):
         self.register_model('dbPages', dbPages)

@@ -8,7 +8,7 @@ class dbPages(model.Model):
 
     @property
     def page_modules(self):
-        return dict([(module.identifier, module.content) for module in dbPageModules.query(ancestor=self).fetch(100)])
+        return dict([(module.identifier, module.content) for module in dbPageModules.query(ancestor=self.key).fetch(100)])
 
 class dbPageModules(model.Model):
     identifier = model.StringProperty()

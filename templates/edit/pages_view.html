@@ -2,4 +2,17 @@
 {% block content %}
 <h1>Pages</h1>
 
+<form action="{{ current_url }}" method="post">
+    <label>
+        Page_name
+        <input type="text" name="page_name" />
+    </label>
+    <label>
+        Title
+        <input type="text" name="content_module|title" />
+    </label>
+    <button>Save</button>
+</form>
+    
+
 {% endblock content %}
